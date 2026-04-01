@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Start Screen -->
+<div class="start-screen" id="startScreen">
+  <h1>Hey… I made something for you ❤️</h1>
+  <button onclick="start()">Start</button>
+</div>
+
+<!-- Music -->st
+<audio id="bgMusic" loop>
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Hearts -->
+<div class="hearts"></div>
+
+<!-- Slideshow -->
+<div class="slideshow" id="slideshow">
+
+  <div class="slide active">
+    <img src="images/img1.jpg">
+    <div class="caption">You look amazing here 😍</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/img2.jpg">
+    <div class="caption">This one… wow.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/img3.jpg">
+    <div class="caption">My favorite ❤️</div>
+  </div>
+
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()" style="position:fixed; top:10px; right:10px;">🔊</button>
+
+
+<script src="script.js"></script>
+</body>
+</html>

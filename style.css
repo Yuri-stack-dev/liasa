@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+/* Start Screen */
+.start-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Slideshow */
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  padding: 0 20px;
+  text-shadow: 0 0 10px black;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 600px) {
+  .caption {
+    font-size: 18px;
+    bottom: 10%;
+  }
+
+  h1 {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+}
+
+/* Hearts */
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -10px;
+  color: rgba(255, 0, 100, 0.6);
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
